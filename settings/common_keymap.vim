@@ -2,7 +2,14 @@
 " faster navigation
 
 inoremap jk <Esc>
-nnoremap J 5jzz
-nnoremap K 5kzz
+inoremap <Esc> <Nop>
+
+nnoremap J 5j^
+nnoremap K 5k^
 nnoremap H ^
 nnoremap L $
+
+" Editing
+
+onoremap H ^
+onoremap L $
