@@ -1,8 +1,10 @@
-
-" faster navigation
+" Remap esc
 
 inoremap jk <Esc>
+inoremap kj <Esc>
 inoremap <Esc> <Nop>
+
+" faster navigation
 
 nnoremap J 5j^
 nnoremap K 5k^
