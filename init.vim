@@ -46,4 +46,4 @@ colorscheme onedark
 " Extend files
 " ----------------
 
-execute 'source' './settings/common_keymap.vim'
+runtime settings/common_keymap.vim
