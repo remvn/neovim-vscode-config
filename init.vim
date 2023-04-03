@@ -2,7 +2,7 @@
 " General settings
 " ----------------
 
-language en_US
+language en_US.utf8
 set number 
 set relativenumber
 set mouse=a
@@ -37,6 +37,8 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     " Status bar
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+	
+	Plug 'wellle/targets.vim'
 
 call plug#end()
 

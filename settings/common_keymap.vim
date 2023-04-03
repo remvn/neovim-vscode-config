@@ -1,7 +1,6 @@
 " Remap esc
-inoremap jk <esc>
-inoremap kj <esc>
-inoremap <Esc> <nop>
+inoremap jk <Esc>
+inoremap <Esc> <Nop>
 
 " faster scroll
 nnoremap J 5j^
@@ -17,7 +16,7 @@ onoremap L $
 nnoremap x "_x
 
 " Disable macro
-nnoremap q <nop>
+nnoremap q <Nop>
 
 " Map command key 
 nnoremap ; :
