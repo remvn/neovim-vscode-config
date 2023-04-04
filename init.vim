@@ -37,7 +37,7 @@ endif
 " Plugins
 " ----------------
 
-call plug#begin('~/AppData/Local/nvim/plugged')
+call plug#begin()
 
     Plug 'navarasu/onedark.nvim'
     Plug 'tpope/vim-surround'
