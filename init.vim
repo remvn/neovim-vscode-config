@@ -27,11 +27,11 @@ syntax on
 
 " Enable copying from vim to clipboard 
 
-if has('win32')
-  set clipboard=unnamed  
-else
-  set clipboard=unnamedplus
-endif
+" if has('win32')
+"  set clipboard=unnamed  
+" else
+"  set clipboard=unnamedplus
+" endif
 
 " ----------------
 " Plugins
