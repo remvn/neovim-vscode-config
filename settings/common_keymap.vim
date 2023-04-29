@@ -16,7 +16,7 @@ onoremap L $
 nnoremap x "_x
 
 " Disable macro
-nnoremap q <Nop>
+" nnoremap q <Nop>
 
 " Map command key 
 nnoremap ; :
