@@ -1,10 +1,9 @@
 " Remap esc
 inoremap jk <Esc>
-inoremap <Esc> <Nop>
 
 " faster scroll
-nnoremap J 5j^
-nnoremap K 5k^
+nnoremap <C-j> 5j^
+nnoremap <C-k> 5k^
 
 " Remap ^ and $
 nnoremap H ^
