@@ -1,5 +1,8 @@
-" Remap esc
-inoremap jk <Esc>
+if exists('g:vscode')
+else
+	" Remap esc
+	inoremap jk <Esc>
+endif
 
 " faster scroll
 nnoremap <C-j> 5j^
@@ -13,4 +16,4 @@ noremap <C-l> $
 nnoremap x "_x
 
 " tag modifying
-nnoremap <leader>i vato<Esc>f>i<space>
+nnoremap <leader>aa vato<Esc>f>i<space>

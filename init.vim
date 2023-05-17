@@ -4,12 +4,12 @@ function! Cond(cond, ...)
 endfunction
 
 language en_US.utf8
-	
+
 if exists('g:vscode')
-    " VSCode extension
+    " vscode extension
 	
 else
-    " ordinary Neovim
+    " normal neovim
 	
 	" install vim plug
 	let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -44,22 +44,27 @@ endif
 " Plugins
 
 call plug#begin()
+	" normal vim
     Plug 'navarasu/onedark.nvim', Cond(!exists('g:vscode'))
-
-    " Status bar
     Plug 'vim-airline/vim-airline', Cond(!exists('g:vscode'))
     Plug 'vim-airline/vim-airline-themes', Cond(!exists('g:vscode'))
+	Plug 'mattn/emmet-vim', Cond(!exists('g:vscode'))
 	
+	" vscode extension
+	Plug 'AndrewRadev/splitjoin.vim'
+	Plug 'andymass/vim-matchup'
 	Plug 'tpope/vim-surround'
 	Plug 'wellle/targets.vim'
 call plug#end()
 
 if exists('g:vscode')
-    " VSCode extension
+    " vscode extension
 else
-    " ordinary Neovim
+    " normal neovim
 	colorscheme onedark
 endif
+
+let g:matchup_surround_enabled = 1
 
 " Extend files
 
