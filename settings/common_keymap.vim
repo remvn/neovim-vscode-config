@@ -17,3 +17,4 @@ nnoremap x "_x
 
 " tag modifying
 nnoremap <leader>aa vato<Esc>f>i<space>
+vnoremap <leader>rep :s/\%V\%V/
