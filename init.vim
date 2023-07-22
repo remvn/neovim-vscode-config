@@ -31,28 +31,21 @@ else
 	set list
 	set encoding=UTF-8
 	syntax on
-	
-	" enable copying from vim to clipboard 
-	" if has('win32')
-	"  set clipboard=unnamed  
-	" else
-	"  set clipboard=unnamedplus
-	" endif
 endif
 
 
-" Plugins
+" plugins
 
 call plug#begin()
-	" normal vim
+	" only in normal vim
     Plug 'navarasu/onedark.nvim', Cond(!exists('g:vscode'))
     Plug 'vim-airline/vim-airline', Cond(!exists('g:vscode'))
     Plug 'vim-airline/vim-airline-themes', Cond(!exists('g:vscode'))
 	Plug 'mattn/emmet-vim', Cond(!exists('g:vscode'))
 	
-	" vscode extension
-	Plug 'AndrewRadev/splitjoin.vim'
-	Plug 'andymass/vim-matchup'
+	"
+	" Plug 'AndrewRadev/splitjoin.vim'
+	" Plug 'andymass/vim-matchup'
 	Plug 'tpope/vim-surround'
 	Plug 'wellle/targets.vim'
 call plug#end()
@@ -66,6 +59,5 @@ endif
 
 let g:matchup_surround_enabled = 1
 
-" Extend files
-
-runtime settings/common_keymap.vim
+" require files
+runtime settings/keymap.vim
