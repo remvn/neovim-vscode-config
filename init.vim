@@ -42,6 +42,7 @@ call plug#begin()
     Plug 'vim-airline/vim-airline', Cond(!exists('g:vscode'))
     Plug 'vim-airline/vim-airline-themes', Cond(!exists('g:vscode'))
 	Plug 'mattn/emmet-vim', Cond(!exists('g:vscode'))
+	Plug 'ThePrimeagen/vim-be-good', Cond(!exists('g:vscode'))
 	
 	"
 	" Plug 'AndrewRadev/splitjoin.vim'
