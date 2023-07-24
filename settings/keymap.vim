@@ -1,7 +1,5 @@
-let mapleader = ","
 
-if exists('g:vscode')
-else
+if !exists('g:vscode')
 	" remap esc
 	inoremap jk <Esc>
 endif
@@ -32,19 +30,34 @@ nnoremap <C-a> ggVG
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+
+
+
+" space leader, use for quick editing
+let mapleader = " "
+
+" block comment 
+xnoremap <leader>/ <Cmd>call VSCodeCall('editor.action.blockComment')<CR><Esc>
+nnoremap <leader>/ <Cmd>call VSCodeCall('editor.action.blockComment')<CR>
+
 " yank to system register
 nnoremap <leader>y "+y
 nnoremap <leader>Y "+Y
 vnoremap <leader>y "+y
 
-" tag modifying
-nnoremap <leader>taa vato<Esc>f>i<space>
-nnoremap <leader>paa vi)<Esc>a,<space>
-vnoremap <leader>rep :s/\%V\%V/
-
-" vscode actions
 noremap <leader>sa <Cmd>call VSCodeNotify('editor.action.sourceAction')<CR>
 noremap <leader>ca <Cmd>call VSCodeNotify('editor.action.codeAction')<CR>
-noremap <leader>rts <Cmd>call VSCodeNotify('typescript.restartTsServer')<CR>
-xnoremap <leader>bm <Cmd>call VSCodeCall('editor.action.blockComment')<CR><Esc>
-nnoremap <leader>bm <Cmd>call VSCodeCall('editor.action.blockComment')<CR>
+
+
+
+
+" \ leader use for some command and complex macro
+
+" tag modifying
+nnoremap \taa vato<Esc>f>i<space>
+nnoremap \paa vi)<Esc>a,<space>
+vnoremap \rep :s/\%V\%V/
+
+noremap \rs <Cmd>call VSCodeNotify('typescript.restartTsServer')<CR>
+
+
