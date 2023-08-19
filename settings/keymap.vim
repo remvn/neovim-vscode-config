@@ -7,6 +7,8 @@ endif
 " faster scroll
 nnoremap <C-j> 5j
 nnoremap <C-k> 5k
+vnoremap <C-j> 5j
+vnoremap <C-k> 5k
 
 " must use gu or gU in visual mode
 vnoremap u <nop>
@@ -27,8 +29,9 @@ nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 nnoremap <C-a> ggVG
 
 " move highlighting lines
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+" bug: if lines contain empty line then it will become a mess
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 
 
@@ -45,8 +48,18 @@ nnoremap <leader>y "+y
 nnoremap <leader>Y "+Y
 vnoremap <leader>y "+y
 
+" close editor
+nnoremap <leader>w <Cmd>Wq<CR>
+
+" paste in visual without copy selected 
+xnoremap <leader>p "_dP
+
+" rename symbol 
+nnoremap <leader>r <Cmd>call VSCodeNotify('editor.action.rename')<CR>
+
 noremap <leader>sa <Cmd>call VSCodeNotify('editor.action.sourceAction')<CR>
 noremap <leader>ca <Cmd>call VSCodeNotify('editor.action.codeAction')<CR>
+
 
 
 

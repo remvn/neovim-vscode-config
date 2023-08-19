@@ -5,12 +5,7 @@ endfunction
 
 language en_US.utf8
 
-if exists('g:vscode')
-    " vscode extension
-	
-else
-    " normal neovim
-	
+if !exists('g:vscode')
 	" install vim plug
 	let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 	if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -33,7 +28,6 @@ else
 	syntax on
 endif
 
-
 " plugins
 
 call plug#begin()
@@ -44,21 +38,21 @@ call plug#begin()
 	Plug 'mattn/emmet-vim', Cond(!exists('g:vscode'))
 	Plug 'ThePrimeagen/vim-be-good', Cond(!exists('g:vscode'))
 	
-	"
 	" Plug 'AndrewRadev/splitjoin.vim'
 	" Plug 'andymass/vim-matchup'
 	Plug 'tpope/vim-surround'
 	Plug 'wellle/targets.vim'
+	" Plug 'kana/vim-textobj-user'
+	" Plug 'Julian/vim-textobj-variable-segment'
+	Plug 'chaoren/vim-wordmotion'
 call plug#end()
 
-if exists('g:vscode')
-    " vscode extension
-else
-    " normal neovim
+let g:wordmotion_prefix = ','
+
+if !exists('g:vscode')
+	let g:matchup_surround_enabled = 1
 	colorscheme onedark
 endif
-
-let g:matchup_surround_enabled = 1
 
 " require files
 runtime settings/keymap.vim
