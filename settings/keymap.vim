@@ -70,6 +70,7 @@ noremap <leader>ca <Cmd>call VSCodeNotify('editor.action.codeAction')<CR>
 nnoremap \taa vato<Esc>f>i<space>
 nnoremap \paa vi)<Esc>a,<space>
 vnoremap \rep :s/\%V\%V/
+nnoremap \sp <Cmd>call VSCodeNotify('editor.emmet.action.splitJoinTag')<CR>
 
 noremap \rs <Cmd>call VSCodeNotify('typescript.restartTsServer')<CR>
 
