@@ -1,1 +1,1 @@
-Neovim extension for VSCode: [https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-neovim](Link)
+Neovim extension for VSCode: [Link](https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-neovim)
